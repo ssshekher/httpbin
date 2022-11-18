@@ -9,16 +9,20 @@ pipeline {
             sh 'npm install'
          }
       }
-      
+      stage("Build") {
+            steps {
+                sh "npm run build"
+            }
+
       stage('Test stage Done') {
         steps {
            sh 'echo "testing application...."'
         }
       }
         
-         stage("Deploying complete") {
-         steps {
-           sh 'echo "deploying application...."'
+      stage("Deploying complete") {
+       steps {
+         sh 'echo "deploying application...."'
          }
       }
     }
