@@ -13,7 +13,7 @@ pipeline {
             steps {
                 sh "npm run build"
             }
-
+         }
       stage('Test stage Done') {
         steps {
            sh 'echo "testing application...."'
